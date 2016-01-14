@@ -1,0 +1,90 @@
+<?php 
+if  (!isset($_POST['submit']))  
+{ 
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/normalize/normalize.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div id="login" class="form-group" style="padding-left:200px;padding-right:200px;">
+    <form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+    <fieldset>
+    <legend style="background:#3AA949;text-align:center;color:#fff;">Upload Notice</legend>
+    <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
+
+    <label class="label label-primary">Notice Tittle</label>
+    <input class="form-control" id="exampleInputEmail1" name="name" type="text" placeholder="Notice Tittle" required><br/>
+
+     <label class="label label-danger">Last date</label>
+    <input class="form-control" id="exampleInputEmail1" name="date" type="date" placeholder="Notice Tittle" required>
+
+
+    <input type="file" name="data"  style="padding-top:20px;padding-bottom:40px;height:20px;" />
+
+    <input class="btn btn-primary" type="submit" name="submit" value="Upload" />
+    </fieldset>
+    </form>
+</div>
+</body>
+</html>
+
+
+<?php
+
+}  
+else
+{
+$name = $_POST['name'];
+$lastdate = $_POST['date'];
+$entrydate = date("Y-m-d");
+//  check  uploaded  file  size
+
+if  ($_FILES['data']['size']  ==  0)
+{
+
+die("ERROR:  Zero  byte  file  upload");
+
+}
+
+//  check  if  file  type  is  allowed  (optional)
+
+/*$allowedFileTypes  =  array("image/gif",  "image/jpeg",  "image/pjpeg", "text/pdf", "application/pdf", "text/plain", "application/msword");
+
+if  (!in_array($_FILES['data']['type'],  $allowedFileTypes)) 
+{
+
+die("ERROR:  File  type  not  permitted");
+
+} //  check  if  this  is  a  valid  upload*/
+
+if  (!is_uploaded_file($_FILES['data']['tmp_name']))
+{
+
+die("ERROR:  Not  a  valid  file  upload"); 
+
+} //  set  the  name  of  the  target  directory
+
+$uploadDir  =  "./notice/"; //  copy  the  uploaded  file  to  the  directory
+move_uploaded_file($_FILES['data']['tmp_name'],  $uploadDir  .  $_FILES['data']['name'])  or  die("Cannot  copy  uploaded  file"); //  display  success  message
+echo  "File  successfully  uploaded  to  "  .  $uploadDir  .$_FILES['data']['name'];  
+
+$link = "notice/".$_FILES["data"]["name"];
+
+include "db_connect.php";
+$sql= "INSERT INTO `notice`(`tittle`, `entry_date`, `last_date`, `details`, `type`) VALUES ('$name','$entrydate','$lastdate','$link', 'notice')";
+ mysql_query($sql);
+
+}
+?>

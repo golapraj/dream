@@ -1,0 +1,147 @@
+﻿     body
+    {
+         margin-bottom: -300px;     
+    }
+    .header
+    {
+        height: 20%;
+        background:#AD2323;
+    }
+     .banar
+    {
+        height: 80%;
+    }
+    .banar #cse
+    {
+        padding-top: 15px;
+        margin-right: -20px;
+        float:left;
+        height: 130px;
+        width: 120px;
+    }
+    .banar h1
+    {
+        font-family: cursive;
+        padding-left: 500px;
+        font-size: 110px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        color: red;
+        text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+        
+    }
+     .banar h5
+    {
+        color: #fff;
+        padding-left: 380px;
+        font-size: 20px;
+    }
+   .menubar
+    {
+        height:20%;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .menubar ul
+    {
+       background:white;
+        margin-left: 100px;
+        float: left;
+        padding: 5px;
+        list-style:none;
+    }
+
+   .menubar > ul > li
+    {
+         float: left;
+        position: relative;
+       
+    }
+
+.menubar > ul > li > ul 
+ {
+list-style: none;
+position: absolute; /* change this */
+margin-left: 0px;
+padding-left: 0px;
+   }
+
+
+    .menubar ul li
+    {
+        background:#DD9193;
+        margin-top: 0px;
+        border-right:3px solid #fff;
+    }
+.menubar ul li  {
+            height: auto;
+            width: 165px;  /* Each menu item is 150px wide */
+            float: left;  /* This lines up the menu items horizontally */
+            text-align: center;  /* All text is placed in the center of the box */
+            list-style: none;  /* Removes the default styling (bullets) for the list */
+            padding: 0;
+            margin: 0;
+             }
+.menubar a   {                           
+        padding: 10px ;  /* Adds a padding on the top and bottom so the text appears centered vertically */
+        text-decoration: none;  /* Removes the default hyperlink styling. */
+        border-bottom:1px solid #fff;
+        color: #AD2323; /* Text color is white */
+        display: block;
+        }
+.menubar li ul li:hover
+{
+     background: #AD2323;
+} 
+.menubar li ul li:hover a
+{
+   color:#fff;
+} 
+.menubar li ul   {
+        display: none;  /* Hides the drop-down menu */
+        height: auto;                                   
+        margin: 0; /* Aligns drop-down box underneath the menu item */
+        padding: 0; /* Aligns drop-down box underneath the menu item */         
+        }               
+
+.menubar li:hover ul 
+{
+    display: block; /* Displays the drop-down box when the menu item is hovered over */
+  }
+.menubar li ul li 
+{
+    background-color: #DD9193;
+} 
+
+.contentt
+{
+     margin-right: 75px;
+        margin-left: 75px;
+}
+
+iframe
+{
+  border: 0px;
+}
+.footer
+{
+    height: 8%;
+    text-align: center;
+    background-color: #AD2323;
+    color:#fff;
+    margin-top:10px; 
+
+}
+ .footer p
+ {
+     margin-top:-10px; 
+ }
+ hr
+ {
+    margin-top: 0px;
+    margin-left: 300px;
+    margin-right: 300px;
+ }
+
+

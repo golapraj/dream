@@ -1,0 +1,123 @@
+    body
+    {
+        margin-bottom: -250px;
+    }
+    .header
+    {
+        height: 20%;
+        background:#AD2323;
+    }
+    .banar
+    {
+        height: 80%;
+    }
+     .banar #cse
+    {
+        padding-top: 15px;
+        margin-right: -20px;
+        float:left;
+        height: 130px;
+        width: 120px;
+    }
+    .banar h1
+    {
+        font-family: cursive;
+        padding-left: 500px;
+        font-size: 110px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        color: red;
+        text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+        
+    }
+     .banar h5
+    {
+        color: #fff;
+        padding-left: 380px;
+        font-size: 20px;
+    }
+    .menu 
+    {
+        overflow: hidden;
+        height:20%;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .menu ul
+    {
+        background:white;
+        margin-right: 250px;
+        float: right;
+        padding: 5px;
+        list-style:none;
+        border-radius: 10px;
+    }
+    .menu ul li
+    {
+        background:#DD9193;
+        float:left;
+        margin-top: -2px;
+        border-right:3px solid #fff;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .menu li:last-child 
+    {
+        border-right:none;
+    }
+    .menu ul li a
+    {
+        display:block;
+        color:#AD2323;
+        padding:10px; 
+        text-decoration:none;
+    }
+    .menu ul li a:hover
+    {
+        background: #AD2323;
+        color:#fff;
+         border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+ 
+    .content
+    {
+        padding-top: 50px;
+        width:100%;
+        height:100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer
+    {
+        height: 80px;
+        text-align: center;
+        margin: 0 px;
+        padding: 0 px;
+        background: #AD2323;
+        color: white;
+
+    }
+    .footer p
+    {
+         background-color: #F5F5F5;
+         padding-top: -300px;
+        margin-top:-10px; 
+         background: #AD2323;
+        color: white;
+    }
+
+     .main_content
+    {
+        width: 75.99%;
+        float: left;
+        padding-left: 1px;
+    }
+ hr
+ {
+    margin-top: 0px;
+    margin-left: 300px;
+    margin-right: 300px;
+ }
